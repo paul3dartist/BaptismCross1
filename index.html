@@ -6,23 +6,72 @@
   <title>Personalized Baptism Cross</title>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
   <style>
+    body {
+      margin: 0;
+      font-family: serif;
+      background-color: #ffffff;
+    }
     model-viewer{
          width:800px;
          height:800px;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #000;
+      border-radius: 4px;
+    }
+
+.product-card h2,
+.product-card p {
+  text-align: left;
+}
+    /* Mobile */
+    @media (max-width: 600px) {
+      .page {
+        padding: 12px;
+        align-items: flex-start;
+      }
+    
+      .product-card h2 {
+        font-size: 1.3rem;
+      }
+    
+      .product-card p {
+        font-size: 1rem;
+      }
+      model-viewer{
+         width:400px;
+         height:400px;
+      }
     }
   </style>
 </head>
 <body>
 <section id="about-section">
-  <div class="container col-xl-12">
-    <div class="row flex-lg-row-reverse align-items-center d-flex justify-content-center justify-content-md-start">
-      <div class="col-8 col-sm-8 col-lg-4">
+  <div class="page">
+    <div class="product-card">
         <model-viewer alt="Personalized Baptism Cross" src="./Baptism_Cross2-compressed.glb" ar environment-image="./christmas_photo_studio_05_1k.hdr" exposure="1" tone-mapping="aces" poster="./untitled.png" shadow-intensity="1" camera-controls touch-action="pan-y"  camera-target="0m 0m 0m" auto-rotate rotation-per-second="30deg"></model-viewer>
-      </div>
-      <div class="col-lg-8 mt-3 mt-lg-0 text-white">
+    
         <h2 class="fw-bold mb-3 d-flex justify-content-center justify-content-md-start">Personalized Baptism Cross</h2>
         <p class="d-flex justify-content-center justify-content-md-start">PHP 3,579.41</p>
-      </div>
     </div>
   </div>
 </section>
